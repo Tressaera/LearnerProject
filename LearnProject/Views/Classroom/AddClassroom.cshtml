@@ -1,0 +1,14 @@
+﻿@model LearnProject.Models.Entities.Classroom
+@{
+    ViewBag.Title = "AddClassroom";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3 class="mt-3">Derslik Ekle</h3>
+<form method="post">
+
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control mb-3", @placeholder = "Derslik adı" })
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control mb-3", @placeholder = "Ikon" })
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control mb-3", @placeholder = "Açıklama ekle" })
+    <button class="btn btn-outline-primary"><i class="fas fa-save">Kaydet</i></button>
+</form>

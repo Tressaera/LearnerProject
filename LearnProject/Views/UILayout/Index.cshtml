@@ -1,0 +1,169 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!-- /*
+* Template Name: Learner
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="~/Templates/learner/favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="~/Templates/learner/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/animate.min.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/Templates/learner/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="~/Templates/learner/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/aos.css">
+    <link rel="stylesheet" href="~/Templates/learner/css/style.css">
+
+    <title>Learner Project - MY Yazılım Akademi</title>
+</head>
+
+<body>
+
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <nav class="site-nav mb-5">
+        <div class="pb-2 top-bar mb-3">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-5 col-lg-8">
+                        <a href="#" class="small mr-2"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Bir sorunuz mu var?</span></a>
+                        <a href="#" class="small mr-2"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">0 555 555 55 55</span></a>
+                        <a href="#" class="small mr-2"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">iletisim@kur.com</span></a>
+                    </div>
+
+                    <div class="col-7 col-lg-4 text-right">
+                        <a href="/AdminLogin/Index" class="small mr-2">
+                            <span class="icon-lock"></span>
+                            Admin Girişi
+                        </a>
+                        <a href="/Student/StudentLogin" class="small mr-2">
+                            <span class="icon-person_outline"></span>
+                            Öğrenci Girişi
+                        </a>
+                        <a href="/TeacherLogin/Index" class="small">
+                            <span class="icon-person_pin"></span>
+                            Öğretmen Girişi
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sticky-nav js-sticky-header">
+            <div class="container position-relative">
+                <div class="site-navigation text-center">
+                    <a href="/Default/Index" class="logo menu-absolute m-0">Learner Academy<span class="text-primary">.</span></a>
+
+                    <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+                        <li><a href="#category">Kurs Kategorileri</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#classroom">Sınıflar</a></li>
+                        <li><a href="#course">Kurslar</a></li>
+                        <li><a href="#testimonial">Referanslar</a></li>
+                        <li><a href="/Contact/Index">İletişim</a></li>
+                        <li><a href="#faq">SSS</a></li>
+
+                    </ul>
+
+                    <a href="/Student/Register" class="btn-book btn btn-secondary btn-sm menu-absolute"> <i class="icon-person_add mr-2"></i>Hemen Kaydol</a>
+
+                    <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    @RenderBody()
+
+
+
+    <div class="site-footer">
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 mr-auto">
+                   
+                    <div class="widget text-center">
+                       
+                        <ul class="list-unstyled social">
+                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                            <li><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+                            <li><a href="#"><span class="icon-dribbble"></span></a></li>
+                        </ul>
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-lg-3 -->
+
+
+
+
+
+
+               
+
+            </div> <!-- /.row -->
+
+         
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="~/Templates/learner/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Templates/learner/js/popper.min.js"></script>
+    <script src="~/Templates/learner/js/bootstrap.min.js"></script>
+    <script src="~/Templates/learner/js/owl.carousel.min.js"></script>
+    <script src="~/Templates/learner/js/jquery.animateNumber.min.js"></script>
+    <script src="~/Templates/learner/js/jquery.waypoints.min.js"></script>
+    <script src="~/Templates/learner/js/jquery.fancybox.min.js"></script>
+    <script src="~/Templates/learner/js/jquery.sticky.js"></script>
+    <script src="~/Templates/learner/js/aos.js"></script>
+    <script src="~/Templates/learner/js/custom.js"></script>
+
+</body>
+
+</html>

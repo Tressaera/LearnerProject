@@ -1,0 +1,27 @@
+﻿@model List<LearnProject.Models.Entities.Testimonial>
+<div class="untree_co-section bg-light" id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 text-center mx-auto">
+                <h3 class="line-bottom mb-4">Referanslarımız</h3>
+                <div class="owl-carousel wide-slider-testimonial">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <blockquote class="block-testimonial">
+                                <p>
+                                    &ldquo;LearnerAcademy Hakkında Ne Dediler..?&rdquo;
+                                </p>
+                                <div class="author">
+                                    <img  src="@item.ImageUrl" alt="@item.NameSurname">
+                                    <h3>@item.NameSurname</h3>
+                                    <p class="position">@item.Title</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

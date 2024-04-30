@@ -1,0 +1,17 @@
+﻿@model LearnProject.Models.Entities.CourseVideo
+@{
+    ViewBag.Title = "UpdateCourseVideo";
+    Layout = "~/Views/TeacherLayout/Index.cshtml";
+}
+
+<h2>Kurs Videosu Güncelle</h2>
+
+<form method="post">
+
+    @Html.TextBoxFor(x => x.CourseVideoId, new { @class = "form-control mb-3", @placeholder = "Kurs ID", style = "display: none;" })
+    @Html.TextBoxFor(x => x.CourseId, new { @class = "form-control mb-3", @placeholder = "Video Numarası" })
+    @Html.TextBoxFor(x => x.VideNumber, new { @class = "form-control mb-3", @placeholder = "Video Numarası" })
+    @Html.TextBoxFor(x => x.VideoUrl, new { @class = "form-control mb-3", @placeholder = "Video URL" })
+    @Html.TextBoxFor(x => x.TeacherId, new { @class = "form-control mb-3", @placeholder = "Video URL" })
+    <button class="btn btn-outline-primary"><i class="fas fa-save"> Kaydet</i></button>
+</form>

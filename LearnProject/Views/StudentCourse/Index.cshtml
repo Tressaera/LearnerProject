@@ -1,0 +1,28 @@
+﻿@model List<LearnProject.Models.Entities.CourseRegister>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+    int count = 0;
+}
+<h2>Satın Alınan Kurslar</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Kurs Adı</th>
+            <th>Kurs İçeriği</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Course.CourseName</td>
+                <td><a class="btn btn-outline-info" href="/StudentCourse/MyCourseList/@item.CourseId">Kurs İçeriği</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

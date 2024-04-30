@@ -1,0 +1,60 @@
+﻿@model List<LearnProject.Models.Entities.FAQ>
+@{
+    int count = 0;
+    string collapseClass = "collapse show";
+    string collapseOne = "collapseOne";
+    string accordion = "accordion_1";
+}
+<div class="untree_co-section" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                <img src="https://cdn.shopify.com/app-store/listing_images/be8e18fe7fd62b265563360c2986633d/promotional_image/CLHpktmI5_QCEAE=.jpeg?height=720&quality=90&width=1280" alt="image" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="line-bottom mb-4">Sıkça Sorulan Sorular</h3>
+                <p>Eğitimlerimiz hakkında sıkça sorulan sorular;</p>
+                @foreach (var item in Model)
+                {
+                    count++;
+
+                    if (count < 2)
+                    {
+                        collapseClass = "collapse show";
+                        collapseOne = "collapseOne";
+                        accordion = "accordion_1";
+                    }
+                    else
+                    {
+                        collapseClass = "collapse";
+                        collapseOne = "collapseTwo";
+                        accordion = "accordion_2";
+                    }
+                    <div class="custom-accordion" id="@accordion">
+
+                    
+
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#@collapseOne" aria-expanded="true" aria-controls="@collapseOne">@item.Question</button>
+                            </h2>
+
+                            <div id="@collapseOne" class="@collapseClass" aria-labelledby="headingOne" data-parent="#@accordion">
+                                <div class="accordion-body">
+                                    <div class="d-flex">
+                                        <div class="accordion-img mr-4">
+                                            <img src="@item.ImageUrl" alt="@item.Question" class="img-fluid">
+                                        </div>
+                                        <div>
+                                            <p>@item.Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .accordion-item -->
+
+                    </div> }
+                </div>
+        </div>
+    </div>
+</div>

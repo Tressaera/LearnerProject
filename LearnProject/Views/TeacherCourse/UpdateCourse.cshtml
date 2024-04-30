@@ -1,0 +1,19 @@
+﻿@model LearnProject.Models.Entities.Course
+@{
+    ViewBag.Title = "UpdateCourse";
+    Layout = "~/Views/TeacherLayout/Index.cshtml";
+}
+
+<h3 class="mt-3">Kurs Güncelle</h3>
+
+<form method="post">
+
+    @Html.TextBoxFor(x => x.CourseId, new { @class = "form-control mb-3", @placeholder = "Kurs ID", style = "display: none;" })
+    @Html.TextBoxFor(x => x.CourseName, new { @class = "form-control mb-3", @placeholder = "Kurs Adı" })
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control mb-3", @placeholder = "Görsel URL" })
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control mb-3", @placeholder = "Açıklama", style = "width: max; height: 200px;" })
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control mb-3", @placeholder = "Fiyat" })
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, "Seç", new { @class = "form-control mb-3" })
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"> Kaydet</i></button>
+</form>

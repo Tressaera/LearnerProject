@@ -1,0 +1,13 @@
+﻿@model LearnProject.Models.Entities.Student
+@{
+    ViewBag.Title = "UpdateStudent";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h3 class="mt-3">Öğrenci Güncelle</h3>
+<form method="post">
+    @Html.HiddenFor(x => x.StudentId)
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control mb-3" })
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control mb-3" })
+    @Html.PasswordFor(x => x.Password, new { @class = "form-control mb-3" })
+    <button class="btn btn-outline-primary"><i class="fa fa-edit">Güncelle</i></button>
+</form>

@@ -1,0 +1,46 @@
+﻿@model List<LearnProject.Models.Entities.Course>
+<div class="untree_co-section bg-light" id="course">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+                <h2 class="line-bottom text-center mb-4">Sizin İçin Doğru Kurslar Burada</h2>
+                <p>Kariyeriniz için doğru seçimler...</p>
+            </div>
+        </div>
+        <div class="row">
+           @foreach (var item in Model)
+           {
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <div class="custom-media mb-3">
+                    <a href="#"><img src="@item.ImageUrl" alt="Image" class="img-fluid"></a>
+                    <div class="custom-media-body">
+                        <div class="d-flex justify-content-between pb-3">
+                            <div class="text-primary"><span class="uil uil-book-open"></span> <span>@item.Category.CategoryName</span></div>
+                            <div class="review"><span class="icon-star"></span> <span>  
+    @{
+        var value = item.Reviews.FirstOrDefault(x => x.CourseId == item.CourseId);
+    }
+    @if (value == null)
+    {
+        <span><small>Henüz Puanlanmadı</small></span>
+    }
+    else
+    { <span class="icon-star"></span>
+        <span>@item.Reviews.Where(x => x.CourseId == item.CourseId).Average(x => x.ReviewValue).ToString("0.00")</span>
+    }
+</span></div>
+                        </div>
+                        <h3>@item.CourseName</h3>
+                        <p class="mb-4">@item.Description</p>
+                        <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                            <div><span class="price">@item.Price</span></div>
+                            <div><a href="#">@item.Teacher.NameSurname</a></div>
+                            <div><a href="/Default/CourseDetail/@item.CourseId">Detay</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        </div>
+    </div>
+</div>

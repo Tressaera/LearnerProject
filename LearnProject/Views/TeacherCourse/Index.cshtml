@@ -1,0 +1,41 @@
+﻿@model  List<LearnProject.Models.Entities.Course>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/TeacherLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+<h3 class="mt-3">Kurslar</h3>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="col-md-1 text-center">#</th>
+            <th class="col-md-1">Kurs Adı</th>
+            <th class="col-md-1">Görsel URL</th>
+            <th class="col-md-5">Açıklama</th>
+            <th class="col-md-1">Fiyat</th>
+            <th class="col-md-1">Kategori</th>
+            <th class="col-md-2 text-center">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th class="text-center">@count</th>
+                <td>@item.CourseName </td>
+                <td class="text-center"> <img src="@item.ImageUrl" style="height:50px; width:70px;" /></td>
+                <td>@(item.Description.Length>50 ? item.Description.Substring(0,50) + "..." : item.Description )</td>
+                <td>@item.Price</td>
+                <td>@item.Category.CategoryName</td>
+                <td class="text-center">
+                    <a href="/TeacherCourse/DeleteCourse/@item.CourseId" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                    <a href="/TeacherCourse/UpdateCourse/@item.CourseId" class="btn btn-outline-info"> <i class="fa fa-edit"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/TeacherCourse/AddCourse/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i>Kurs Ekle</a>
