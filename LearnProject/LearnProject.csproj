@@ -133,7 +133,30 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminDashboardController.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ClassroomController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CourseRegisterController.cs" />
+    <Compile Include="Controllers\CourseVideoController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentCourseController.cs" />
+    <Compile Include="Controllers\StudentDashboardController.cs" />
+    <Compile Include="Controllers\StudentLayoutController.cs" />
+    <Compile Include="Controllers\TeacherCourseController.cs" />
+    <Compile Include="Controllers\TeacherLayoutController.cs" />
+    <Compile Include="Controllers\TeacherLoginController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
